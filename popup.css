@@ -1,0 +1,252 @@
+/* Dew Buddy Popup Styling - Playful Modernism */
+:root {
+  --bg: #FFFDF0;
+  --teal: #4A908F;
+  --gold: #F2C94C;
+  --coral: #EB5757;
+  --charcoal: #333333;
+  --card-bg: #FFFFFF;
+  --shadow: rgba(74, 144, 143, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  color: var(--charcoal);
+}
+
+body {
+  background-color: var(--bg);
+  width: 320px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Base Card Style */
+.card {
+  background-color: var(--card-bg);
+  border: 3px solid var(--charcoal);
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 4px 4px 0px var(--charcoal);
+  position: relative;
+}
+
+/* Welcome Card */
+.welcome-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gold);
+}
+
+.welcome-text h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.welcome-text .tagline {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.mascot-wrapper {
+  width: 48px;
+  height: 48px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.timer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 28px;
+}
+
+.water-card {
+  background-color: #E8F4F4;
+}
+
+.break-card {
+  background-color: #FDF3E7;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-header .icon {
+  font-size: 16px;
+}
+
+.card-header h2 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Circular Progress */
+.circular-progress {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  width: 80px;
+  height: 80px;
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: rgba(51, 51, 51, 0.08);
+  stroke-width: 8;
+}
+
+.progress-ring-fg {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.35s;
+}
+
+.water-color {
+  stroke: var(--teal);
+}
+
+.break-color {
+  stroke: var(--coral);
+}
+
+.time-label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Input pill */
+.input-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: var(--card-bg);
+  border: 2.5px solid var(--charcoal);
+  border-radius: 20px;
+  padding: 4px 10px;
+  width: 100%;
+}
+
+.input-pill input {
+  border: none;
+  background: transparent;
+  width: 32px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  outline: none;
+}
+
+.input-pill .unit {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* Stats and Buttons */
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  border-bottom: 2px dashed rgba(51, 51, 51, 0.1);
+  padding-bottom: 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 10px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+}
+
+.pill-btn {
+  flex: 1;
+  border: 2.5px solid var(--charcoal);
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.pill-btn:active {
+  transform: translate(1px, 1px);
+}
+
+.primary-btn {
+  background-color: var(--teal);
+  color: white;
+  box-shadow: 2px 2px 0px var(--charcoal);
+}
+
+.secondary-btn {
+  background-color: var(--bg);
+  color: var(--charcoal);
+  box-shadow: 2px 2px 0px var(--charcoal);
+}
